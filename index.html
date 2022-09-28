@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Frontend Mentor | Interactive card details form</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<link rel="stylesheet" href="./css/reset.css" />
+		<link rel="stylesheet" href="./css/styles.css" />
+	</head>
+	<body>
+		<header class="header">
+			<img src="./images/bg-main-mobile.png" alt="background purple" />
+			<div class="container">
+				<div class="container__credictCard container__credictCard__back">
+					<img src="./images/bg-card-back.png" alt="credict card back" />
+					<input class="container__input" type="number" name="cvc" id="cvc" value="000" />
+				</div>
+				<div class="container__credictCard container__credictCard__front">
+					<img
+						class="container__img"
+						src="./images/bg-card-front.png"
+						alt="logo credict card front"
+					/>
+					<div class="container__front__elements">
+						<img
+							class="container__front__img"
+							src="#./images/card-logo.svg"
+							alt="logo credict card front"
+						/>
+						<p class="container__credictCard__number">0000 0000 0000 0000</p>
+						<div class="subContainer__date">
+							<p class="container__name">Jane Appleseed</p>
+							<input type="number" name="month" id="month" n value="00" />
+							/
+							<input type="number" name="year" id="year" value="00" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<form class="form">
+				<label for="nameCard" class="form__label">
+					<legend class="form__label__legend">Cardholder Name</legend>
+					<input
+						type="text"
+						name="nameCard"
+						id="nameCard"
+						placeholder="e.g. Jane Appleseed"
+					/>
+				</label>
+				<label for="numberCard" class="form__label">
+					<legend class="form__label__legend">Card Number</legend>
+					<input
+						type="number"
+						name="numberCard"
+						id="numberCard"
+						placeholder="e.g. 1234 5678 9123 0000"
+					/>
+				</label>
+				<label for="monthCard" class="form__label label">
+					<div class="label__div">
+						<legend class="form__label__legend label__legend">Exp. Date (MM/YY)</legend>
+						<input
+							class="label__input"
+							type="number"
+							name="monthCard"
+							id="monthCard"
+							placeholder="MM"
+						/>
+						<input
+							class="label__input"
+							type="number"
+							name="yearCard"
+							id="yearCard"
+							placeholder="YY"
+						/>
+					</div>
+					<div class="label__div">
+						<legend class="form__label__legend label__legend">CVC</legend>
+						<input type="number" name="cvcCard" id="cvcCard" placeholder="e.g. 123" />
+					</div>
+				</label>
+				<button type="submit">Confirm</button>
+			</form>
+		</main>
+
+		<!-- Completed state start -->
+
+		Thank you! We've added your card details Continue
+
+		<footer class="footer">
+			<div class="attribution">
+				Challenge by
+				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+					>Frontend Mentor</a
+				>. Coded by <a href="#">Your Name Here</a>.
+			</div>
+		</footer>
+	</body>
+</html>

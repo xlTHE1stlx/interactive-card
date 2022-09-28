@@ -1,0 +1,207 @@
+.header {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 5rem;
+    /* height: clamp(35vh, auto, 38vh); */
+    /* background-color: goldenrod; */
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: goldenrod;
+}
+
+.container__credictCard {
+    position: absolute;
+    width: 75%;
+    height: auto;
+    /* background-color: darkcyan; */
+}
+
+.container__credictCard__front {
+    left: 5%;
+    bottom: 0%;
+    /* display: flex;
+    flex-direction: column; */
+    transform: translateY(25%);
+    height: auto;
+}
+
+/* .container__img {
+    position: absolute;
+    z-index: -1;
+} */
+
+.container__front__elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    padding: 6% 8%;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: green;
+}
+
+.container__front__img {
+    background-color: aquamarine;
+    display: flex;
+    justify-content: start;
+    height: 40%;
+    width: 25%;
+    margin-bottom: 1rem;
+    object-fit: scale-down;
+}
+
+.container__credictCard__number {
+    background-color: aquamarine;
+    display: flex;
+    text-align: center;
+
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+
+.subContainer__date {
+    background-color: aquamarine;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    width: 100%;
+    height: 1rem;
+
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.container__name {
+    /* background-color: yellow; */
+    display: flex;
+    margin-right: auto;
+}
+
+.subContainer__date>input {
+    /* background-color: yellow; */
+    width: 10%;
+}
+
+.container__credictCard__back {
+    right: 5%;
+    top: 15%;
+}
+
+.container__input {
+    position: absolute;
+    top: 42%;
+    right: 12%;
+    width: 12%;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    background-color: blue;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+    width: clamp(60vw, 90%, 90vw);
+    gap: 5px;
+
+    background-color: yellowgreen;
+}
+
+.form input {
+    border: 1px solid gray;
+    border-radius: var(--border-radius);
+
+    width: 100%;
+}
+
+.form__label {
+    display: flex;
+    flex-direction: column;
+
+    border-radius: var(--border-radius);
+
+    width: 100%;
+    padding: 5px;
+    gap: 5px;
+
+    background-color: brown;
+}
+
+.form__label__legend {
+    text-transform: uppercase;
+    font-size: medium;
+
+    background-color: blueviolet;
+}
+
+.label {
+    display: flex;
+    flex-direction: row;
+}
+
+.label__div {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 5px;
+    width: 50%;
+}
+
+.label__div:first-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.label__legend {
+    grid-column: 1 / -1;
+}
+
+.label__div>.label__input {
+    grid-row: 2;
+}
+
+
+
+/*
+Desktop
+1366x768 (22.98%)
+1920x1080 (20.7%)
+1536x864 (7.92%)
+1440x900 (7.23%)
+1280x720 (4.46%)
+
+smartphone
+360x640 (18.7%)
+375x667 (7.34%)
+414x896 (6.76%)
+360x780 (5.31%)
+375x812 (5.01%)
+
+Tablets
+768x1024 (51.43%)
+1280x800 (7.28%)
+800x1280 (5.26%)
+601x962 (4.32%)
+962x601 (2.99%)
+*/

@@ -2,9 +2,7 @@
     position: relative;
     width: 100%;
     height: auto;
-    margin-bottom: 5rem;
-    /* height: clamp(35vh, auto, 38vh); */
-    /* background-color: goldenrod; */
+    margin-bottom: 4rem;
 }
 
 .container {
@@ -20,22 +18,14 @@
     position: absolute;
     width: 75%;
     height: auto;
-    /* background-color: darkcyan; */
 }
 
 .container__credictCard__front {
     left: 5%;
     bottom: 0%;
-    /* display: flex;
-    flex-direction: column; */
     transform: translateY(25%);
     height: auto;
 }
-
-/* .container__img {
-    position: absolute;
-    z-index: -1;
-} */
 
 .container__front__elements {
     position: absolute;
@@ -86,13 +76,11 @@
 }
 
 .container__name {
-    /* background-color: yellow; */
     display: flex;
     margin-right: auto;
 }
 
 .subContainer__date>input {
-    /* background-color: yellow; */
     width: 10%;
 }
 
@@ -159,8 +147,6 @@
 }
 
 .label {
-    /* display: flex; */
-    /* flex-direction: row; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -191,6 +177,28 @@
 
 .label__input:last-child {
     grid-column: auto / span 2;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.attribution {
+    text-align: center;
+    justify-content: center;
+
+    letter-spacing: normal;
+
+    width: 80%;
+}
+
+.attribution>a {
+    color: indigo;
 }
 
 

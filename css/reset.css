@@ -18,7 +18,8 @@
     --tipo-principal: 'Space Grotesk', sans-serif;
     --tipo-secundaria: Verdana;
     /* bordes redondeados */
-    --border-radius: 5px;
+    --border-radius: 8px;
+    --padding: 10px;
 }
 
 /* Las adaptamos al modo oscuro */

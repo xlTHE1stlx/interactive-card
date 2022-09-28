@@ -99,50 +99,40 @@
 .main {
     display: flex;
     justify-content: center;
-
     width: 100%;
-
     background-color: blue;
 }
 
 .form {
     display: flex;
     flex-direction: column;
-
     width: clamp(60vw, 90%, 90vw);
-    gap: 5px;
-
+    gap: 10px;
     background-color: yellowgreen;
 }
 
 .form input {
     border: 1px solid gray;
     border-radius: var(--border-radius);
-
     width: 100%;
     height: 2rem;
+    padding: var(--padding);
 }
 
 .form__label {
     display: flex;
     flex-direction: column;
-
-    border-radius: var(--border-radius);
-
     width: 100%;
-    padding: 5px;
+    padding: var(--padding);
     gap: 5px;
-
     background-color: brown;
 }
 
 .form__label__legend {
     display: flex;
     align-items: center;
-
     text-transform: uppercase;
-    font-size: large;
-
+    font-size: 0.9rem;
     background-color: blueviolet;
 }
 
@@ -155,7 +145,7 @@
 .label__div {
     display: flex;
     flex-direction: column;
-    padding: 5px;
+    padding: var(--padding);
     gap: 5px;
     width: 50%;
 }
@@ -179,6 +169,18 @@
     grid-column: auto / span 2;
 }
 
+.form>button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    margin: 5px;
+    width: calc(100% - 10px);
+    border-radius: var(--border-radius);
+    background-color: darkblue;
+}
+
 .footer {
     display: flex;
     flex-wrap: nowrap;
@@ -186,14 +188,12 @@
     justify-content: center;
     width: 100%;
     margin-top: 1rem;
+    font-size: 0.8rem;
 }
 
 .attribution {
     text-align: center;
     justify-content: center;
-
-    letter-spacing: normal;
-
     width: 80%;
 }
 

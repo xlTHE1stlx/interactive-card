@@ -11,7 +11,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: goldenrod;
+    color: var(--color-text);
 }
 
 .container__credictCard {
@@ -31,20 +31,15 @@
     position: absolute;
     top: 0;
     left: 0;
-
     display: flex;
     flex-direction: column;
     padding: 6% 8%;
     justify-content: space-between;
-
     width: 100%;
     height: 100%;
-
-    background-color: green;
 }
 
 .container__front__img {
-    background-color: aquamarine;
     display: flex;
     justify-content: start;
     height: 40%;
@@ -54,23 +49,18 @@
 }
 
 .container__credictCard__number {
-    background-color: aquamarine;
     display: flex;
     text-align: center;
-
     letter-spacing: 1px;
     font-size: 1rem;
 }
 
 .subContainer__date {
-    background-color: aquamarine;
     display: flex;
     justify-content: end;
     align-items: center;
-
     width: 100%;
     height: 1rem;
-
     font-size: 0.8rem;
     text-align: center;
 }
@@ -100,23 +90,25 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: blue;
 }
 
 .form {
     display: flex;
     flex-direction: column;
     width: clamp(60vw, 90%, 90vw);
-    gap: 10px;
-    background-color: yellowgreen;
+    gap: 5px;
 }
 
 .form input {
-    border: 1px solid gray;
+    border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
     width: 100%;
     height: 2rem;
-    padding: var(--padding);
+    padding: var(--padding-top-bottom) var(--padding);
+}
+
+.form input::placeholder {
+    color: var(--color-border);
 }
 
 .form__label {
@@ -125,21 +117,22 @@
     width: 100%;
     padding: var(--padding);
     gap: 5px;
-    background-color: brown;
+    color: var(--color-secundary);
 }
 
 .form__label__legend {
     display: flex;
     align-items: center;
     text-transform: uppercase;
-    font-size: 0.9rem;
-    background-color: blueviolet;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
 .label {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 0.5fr 1fr;
 }
 
 .label__div {
@@ -178,7 +171,8 @@
     margin: 5px;
     width: calc(100% - 10px);
     border-radius: var(--border-radius);
-    background-color: darkblue;
+    background-color: var(--color-secundary);
+    color: var(--color-text);
 }
 
 .footer {
@@ -199,6 +193,10 @@
 
 .attribution>a {
     color: indigo;
+}
+
+a:visited {
+    color: var(--color-secundary);
 }
 
 

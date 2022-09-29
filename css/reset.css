@@ -19,7 +19,12 @@
     --tipo-secundaria: Verdana;
     /* bordes redondeados */
     --border-radius: 8px;
+    --padding-top-bottom: 1.3rem;
     --padding: 10px;
+    --color-secundary: #220930;
+    --color-text: #fff;
+    --color-border: #acb3bd;
+    /* --color-labels: #774ed1; */
 }
 
 /* Las adaptamos al modo oscuro */

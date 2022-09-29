@@ -24,7 +24,8 @@
     --color-secundary: #220930;
     --color-text: #fff;
     --color-border: #acb3bd;
-    /* --color-labels: #774ed1; */
+    --color-shadow: rgba(172, 179, 189, 1.4);
+    /* --color-shadow: rgba(172, 179, 189, 0.4); */
 }
 
 /* Las adaptamos al modo oscuro */

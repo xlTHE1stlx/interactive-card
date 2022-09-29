@@ -17,15 +17,18 @@
     /* Tipografía */
     --tipo-principal: 'Space Grotesk', sans-serif;
     --tipo-secundaria: Verdana;
-    /* bordes redondeados */
+
+    --color-white: hsl(0, 0%, 100%);
+    --color-light-gray-violet: hsl(270, 3%, 87%);
+    --color-dark-gray-violet: hsl(279, 6%, 55%);
+    --color-dark-violet: hsl(278, 68%, 11%);
+
     --border-radius: 8px;
     --padding-top-bottom: 1.3rem;
     --padding: 10px;
-    --color-secundary: #220930;
-    --color-text: #fff;
-    --color-border: #acb3bd;
-    --color-shadow: rgba(172, 179, 189, 1.4);
-    /* --color-shadow: rgba(172, 179, 189, 0.4); */
+
+    --color-input-error: hsl(0, 1000%, 66%);
+    --color-gradient-active: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
 }
 
 /* Las adaptamos al modo oscuro */

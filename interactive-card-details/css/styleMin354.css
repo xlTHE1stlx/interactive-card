@@ -51,4 +51,8 @@
     .form__label__legend {
         font-size: 0.8rem;
     }
+
+    .container__credictCard__number {
+        font-size: 5.05vw;
+    }
 }

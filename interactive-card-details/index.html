@@ -4,32 +4,38 @@
 		<title>Frontend Mentor | Interactive card details form</title>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./public/favicon-32x32.png" />
 		<link rel="stylesheet" href="./css/reset.css" />
+		<link rel="stylesheet" href="./css/styles.css" media="screen and (orientation: portrait)" />
 		<link
 			rel="stylesheet"
-			href="./css/styles.css"
-			media="screen and (min-width: 355px) and (max-width: 425px) and (orientation: portrait)"
+			href="./css/styleMin354.css"
+			media="screen and (orientation: portrait) and (max-width: 354px)"
 		/>
+		<!-- <link
+			rel="stylesheet"
+			href="style-small-mobile.css"
+			media="screen and (min-width: 200px) and (max-width: 349px) and (orientation: portrait)"
+		/> -->
 	</head>
 	<body>
 		<header class="header">
-			<img src="./images/bg-main-mobile.png" alt="background purple" />
+			<img src="./public/bg-main-mobile.png" alt="background purple" />
 			<div class="container">
 				<div class="container__credictCard container__credictCard__back">
-					<img src="./images/bg-card-back.png" alt="credict card back" />
+					<img src="./public/bg-card-back.png" alt="credict card back" />
 					<input class="container__input" type="number" name="cvc" id="cvc" value="000" />
 				</div>
 				<div class="container__credictCard container__credictCard__front">
 					<img
 						class="container__img"
-						src="./images/bg-card-front.png"
+						src="./public/bg-card-front.png"
 						alt="logo credict card front"
 					/>
 					<div class="container__front__elements">
 						<img
 							class="container__front__img"
-							src="./images/card-logo.svg"
+							src="./public/card-logo.svg"
 							alt="logo credict card front"
 						/>
 						<p class="container__credictCard__number">0000 0000 0000 0000</p>
@@ -52,16 +58,23 @@
 						name="nameCard"
 						id="nameCard"
 						placeholder="e.g. Jane Appleseed"
+						pattern="[a-zA-ZñÑáÁéÉíÍóÓúüÚÜ]{3,}"
+						title="Debe ingresar un nombre valido"
+						required
 					/>
 				</label>
 				<label for="numberCard" class="form__label">
 					<legend class="form__label__legend">Card Number</legend>
 					<input
 						class="label__input"
-						type="number"
+						type="text"
+						inputmode="numeric"
 						name="numberCard"
 						id="numberCard"
 						placeholder="e.g. 1234 5678 9123 0000"
+						minlength="12"
+						pattern="\d*"
+						required
 					/>
 				</label>
 				<label for="monthCard" class="form__label label">
@@ -72,6 +85,7 @@
 						name="monthCard"
 						id="monthCard"
 						placeholder="MM"
+						required
 					/>
 					<input
 						class="label__input"
@@ -79,6 +93,7 @@
 						name="yearCard"
 						id="yearCard"
 						placeholder="YY"
+						required
 					/>
 					<legend class="form__label__legend label__legend">CVC</legend>
 					<input
@@ -87,6 +102,9 @@
 						name="cvcCard"
 						id="cvcCard"
 						placeholder="e.g. 123"
+						minlength="3"
+						maxlength="3"
+						required
 					/>
 				</label>
 				<button type="submit">Confirm</button>

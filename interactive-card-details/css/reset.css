@@ -25,10 +25,11 @@
 
     --border-radius: 8px;
     --padding-top-bottom: 1.3rem;
-    --padding: 10px;
+    --padding: 8px;
 
     --color-input-error: hsl(0, 1000%, 66%);
-    --color-gradient-active: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    --color-gradient-active-1: hsl(249, 99%, 64%);
+    --color-gradient-active-2: hsl(278, 94%, 30%);
 }
 
 /* Las adaptamos al modo oscuro */

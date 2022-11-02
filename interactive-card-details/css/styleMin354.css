@@ -6,9 +6,9 @@
     gap: 0%;
 }
 
-.form__label__legend {
+/* .form__label__legend {
     font-size: 0.8rem;
-}
+} */
 
 .label {
     gap: 0% var(--padding);
@@ -44,5 +44,11 @@
 
     .container__credictCard__front {
         transform: translateX(-55%) translateY(25%);
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .form__label__legend {
+        font-size: 0.8rem;
     }
 }

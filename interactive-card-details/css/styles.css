@@ -18,7 +18,9 @@
 
 .container__credictCard {
     position: absolute;
-    width: 75%;
+    width: clamp(100px, 75%, 450px);
+    /* max-width: 450px; */
+    /* width: 75%; */
     height: auto;
     background-color: transparent;
 }
@@ -226,13 +228,8 @@ Desktop
 1440x900 (7.23%)
 1280x720 (4.46%)
 
-smartphone
-414x896 (6.76%)
 
 Tablets
-768x1024 (51.43%)
-1280x800 (7.28%)
-800x1280 (5.26%)
 601x962 (4.32%)
-962x601 (2.99%)
+1280x800 (7.28%)
 */

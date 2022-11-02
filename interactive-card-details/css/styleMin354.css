@@ -32,3 +32,17 @@
 .label__input:last-child {
     grid-column: 1 / -1;
 }
+
+@media screen and (max-width: 299px) {
+    .container__credictCard {
+        left: 50%;
+    }
+
+    .container__credictCard__back {
+        transform: translateX(-45%);
+    }
+
+    .container__credictCard__front {
+        transform: translateX(-55%) translateY(25%);
+    }
+}

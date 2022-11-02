@@ -50,7 +50,7 @@
 			</div>
 		</header>
 		<main class="main">
-			<form class="form">
+			<form class="form" autocomplete="off">
 				<label for="nameCard" class="form__label">
 					<legend class="form__label__legend">Cardholder Name</legend>
 					<input
@@ -59,9 +59,12 @@
 						id="nameCard"
 						placeholder="e.g. Jane Appleseed"
 						pattern="[a-zA-ZñÑáÁéÉíÍóÓúüÚÜ]{3,}"
-						title="Debe ingresar un nombre valido"
 						required
 					/>
+					<!-- 
+						title="Debe ingresar un nombre valido" 
+						for add the custom message for the error I should edited the message of validationMessage doing use the setCustomValidity on JS
+					-->
 				</label>
 				<label for="numberCard" class="form__label">
 					<legend class="form__label__legend">Card Number</legend>

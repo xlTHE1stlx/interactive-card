@@ -1,0 +1,18 @@
+body {
+    display: grid;
+    grid-template-columns: 30vw 70vw;
+    grid-template-rows: 95vh 5vh;
+}
+
+.header {
+    background-color: yellowgreen;
+}
+
+.container .main {
+    background-color: aquamarine;
+}
+
+.footer {
+    grid-area: 2 / 1 / -1 / -1;
+    background-color: indigo;
+}

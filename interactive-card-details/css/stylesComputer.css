@@ -6,6 +6,27 @@ body {
 
 .header {
     background-color: yellowgreen;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    background-color: blue;
+
+    position: absolute;
+    left: 50%;
+    height: 50%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 5px;
+    padding: 1rem;
+}
+
+.container__credictCard {
+    background-color: blueviolet;
 }
 
 .container .main {

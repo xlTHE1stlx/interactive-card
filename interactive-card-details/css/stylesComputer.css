@@ -81,6 +81,7 @@ body {
     grid-row: 3 / 4;
     display: flex;
     justify-content: end;
+    font-size: 1.2vw;
 }
 
 .container__name {
@@ -113,11 +114,90 @@ input[type=number]::-webkit-outer-spin-button {
     text-align: end;
 }
 
-.container .main {
+.main {
     background-color: aquamarine;
+    /* grid-column: 2 / -1; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    background-color: azure;
+
+    display: flex;
+    flex-flow: column nowrap;
+    width: 50%;
+    height: 50%;
+    gap: 1rem;
+    padding: var(--padding);
+}
+
+.form__label {
+    background-color: bisque;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 25%;
+    row-gap: 1rem;
+    /* padding: var(--padding); */
+}
+
+/* .form__label:last-child {
+    background-color: blueviolet;
+    outline: 2px dashed green;
+    
+    height: 2rem;
+} */
+
+.form__label__legend:not(.label__legend) {
+    background-color: blue;
+
+    font-size: 1.2rem;
+    /* height: clamp(25px, 30px, 45px); */
+    /* height: clamp(,,70%); */
+    height: minmax(50px, 70px);
+    width: 100%;
+}
+
+.label {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: var(--padding);
+    padding: var(--padding) 0;
+}
+
+.label__legend {
+    background-color: blue;
+
+    grid-row: 1;
+    grid-column: auto / span 2;
+}
+
+.label__input {
+    grid-row: 2;
+}
+
+.label>input:not(:last-child) {
+    background-color: red;
+    width: 50%;
+}
+
+.label>.label__input:not(:not(:last-child)) {
+    background-color: cornflowerblue;
+    /* grid-row: 1; */
+    grid-column: auto / span 2;
+}
+
+button[type=submit] {
+    background: linear-gradient(90deg, red, blue);
 }
 
 .footer {
-    grid-area: 2 / 1 / -1 / -1;
     background-color: indigo;
+    grid-area: 2 / 1 / -1 / -1;
 }

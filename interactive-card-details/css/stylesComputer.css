@@ -10,6 +10,7 @@ body {
     align-items: center;
     background-image: url(../public/bg-main-desktop.png);
     background-size: cover;
+    margin: 0;
 }
 
 .header__img {

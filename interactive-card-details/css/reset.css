@@ -22,6 +22,7 @@
     --color-light-gray-violet: hsl(270, 3%, 87%);
     --color-dark-gray-violet: hsl(279, 6%, 55%);
     --color-dark-violet: hsl(278, 68%, 11%);
+    --color-dark-violet-hover: hsl(278, 68%, 21%);
 
     --border-radius: 8px;
     --padding-top-bottom: 1.3rem;

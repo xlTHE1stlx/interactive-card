@@ -8,7 +8,7 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    background-image: url(../public/bg-main-desktop.png);
+    background-image: url(/bg-main-desktop.png);
     background-size: cover;
     margin: 0;
 }

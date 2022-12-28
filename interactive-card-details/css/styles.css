@@ -70,6 +70,7 @@
     height: 1rem;
     font-size: clamp(4px, 4.05vw, 25px);
     text-align: center;
+    pointer-events: none;
 }
 
 .container__name {
@@ -95,6 +96,7 @@
     width: 12%;
     font-size: clamp(4px, 4.05vw, 25px);
     /* font-size: 4.05vw; */
+    pointer-events: none;
 }
 
 .main {

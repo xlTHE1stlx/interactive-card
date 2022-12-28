@@ -92,6 +92,7 @@ body {
 .container__date {
     text-align: center;
     width: 15%;
+    pointer-events: none;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -111,6 +112,7 @@ input[type=number]::-webkit-outer-spin-button {
     right: 10%;
     width: 20%;
     text-align: end;
+    pointer-events: none;
 }
 
 .main {

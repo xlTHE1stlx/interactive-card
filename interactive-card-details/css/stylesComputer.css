@@ -209,8 +209,12 @@ button[type=submit] {
     transition: background 0.3s ease-out;
 }
 
-button[type=submit]:hover {
+button[type=submit]:hover,
+button[type=submit]:focus,
+button[type=submit]:focus-visible {
     background: var(--color-dark-violet-hover);
+    outline-offset: 2px;
+    outline: solid 2px var(--color-dark-violet);
 }
 
 .footer {

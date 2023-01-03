@@ -207,3 +207,9 @@ body {
     /* opcional */
     -moz-osx-font-smoothing: grayscale;
 }
+
+form.form input.error {
+    outline: 1px solid var(--color-input-error);
+    outline-offset: 1px;
+    background: linear-gradient(var(--color-white), var(--color-white)) padding-box, linear-gradient(red, red) border-box;
+}

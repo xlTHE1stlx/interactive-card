@@ -25,8 +25,18 @@ function trigger(name) {
 	effect();
 }
 
-function spanError(target, typeError) {
-	console.log(target, typeError);
+function spanError(target) {
+	target.classList.add("error");
+	if (target.parentNode.lastChild.id === "spanError") {
+		const child = document.createElement("span");
+		child.setAttribute("id", "spanError");
+		child.classList.add("text-error");
+		child.innerText = `formato no valido`;
+		child.style = "grid-row: 3; grid-column: 1 / -1; color: var(--color-input-error);";
+		target.parentNode.appendChild(child);
+		console.log(target.parentNode.lastChild);
+	}
+	// console.log(target.parentNode);
 }
 
 const self = this;
@@ -70,7 +80,10 @@ const model = document.querySelectorAll("*[model]").forEach((e) => {
 	base(e, proxy, name);
 	let counter = 0;
 	e.addEventListener("input", (event) => {
-		console.log(name, event);
+		if (event.inputType === "deleteContentBackward" || e.value.length === 0) {
+			// deleteError(e);
+			e.classList.remove("error");
+		}
 		if (e.getAttribute("name") === "numberCard") {
 			counter++;
 			if (counter === 4 && e.value.length < 18) {
@@ -78,18 +91,21 @@ const model = document.querySelectorAll("*[model]").forEach((e) => {
 				counter = 0;
 			}
 			if (e.value.length === 0) counter = 0;
-			console.log(counter);
-			// if (e.value.match(/[a-zA-Z]/gm)) {
-			// 	spanError(e, "string");
-			// 	console.log(e.value.match(/[a-zA-Z]/gm));
-			// }
+			if (e.value.match(/[a-zA-Z]/gm)) {
+				spanError(e);
+			}
 		}
 		if (e.getAttribute("name") === "yearCard" || e.getAttribute("name") === "monthCard") {
 			if (e.value.length > 2) {
-				spanError(e, "maximo");
+				spanError(e);
+			} else if (e.getAttribute("name") === "monthCard" && e.value > 12) {
+				spanError(e);
 			}
-			console.log(e.value.length);
 		}
+		if (e.getAttribute("name") === "cvcCard" && e.value.length > 3) {
+			spanError(e);
+		}
+		// console.log(e.parentNode);
 		// proxy[name] = e.value;
 		Reflect.set(proxy, name, e.value);
 	});

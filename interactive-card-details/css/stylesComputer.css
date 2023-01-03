@@ -218,10 +218,7 @@ button[type=submit]:focus-visible {
 }
 
 .footer {
-    /* background-color: rgb(76, 0, 130); */
     background-color: gray;
-    /* background-color: var(--color-light-gray-violet); */
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -252,5 +249,4 @@ button[type=submit]:focus-visible {
     width: 100%;
     left: 0%;
     opacity: 1;
-    /* border-bottom: 2px solid; */
 }

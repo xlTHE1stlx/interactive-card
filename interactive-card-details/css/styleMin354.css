@@ -6,14 +6,13 @@
     gap: 0%;
 }
 
-/* .form__label__legend {
-    font-size: 0.8rem;
-} */
+.main {
+    margin: auto 0%;
+}
 
 .label {
     gap: 0% var(--padding);
     grid-template-columns: repeat(4, 1fr);
-    /* grid-template-rows: repeat(4, 1fr); */
     margin-bottom: var(--padding);
     padding-top: 0%;
 }

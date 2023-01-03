@@ -19,8 +19,6 @@
 .container__credictCard {
     position: absolute;
     width: clamp(100px, 75%, 450px);
-    /* max-width: 450px; */
-    /* width: 75%; */
     height: fit-content;
     background-color: transparent;
 }
@@ -29,7 +27,6 @@
     left: 5%;
     bottom: 0%;
     transform: translateY(25%);
-    /* height: auto; */
 }
 
 /* The last thing I was maked, is try to adjust the font-size of the cards for resolutions greater than 600px */
@@ -76,8 +73,6 @@
 .container__name {
     display: flex;
     margin-right: auto;
-    /* font-size: clamp(4px, 4.1vw, 28px); */
-    /* font-size: 0.8rem; */
 }
 
 .subContainer__date>input {
@@ -95,7 +90,6 @@
     right: 12%;
     width: 12%;
     font-size: clamp(4px, 4.05vw, 25px);
-    /* font-size: 4.05vw; */
     pointer-events: none;
 }
 
@@ -125,10 +119,6 @@
 .form input::placeholder {
     color: var(--color-light-gray-violet);
 }
-
-/* .form input:invalid {
-    border: 1px solid red;
-} */
 
 .form input:focus-visible,
 .form input:focus {
@@ -223,8 +213,6 @@ button[type=submit]:focus-visible {
 
 .footer {
     background-color: gray;
-    /* position: absolute; */
-    /* bottom: 0%; */
     font-size: 0.8rem;
 
     display: flex;
@@ -232,9 +220,6 @@ button[type=submit]:focus-visible {
     align-items: center;
     color: var(--color-white);
     padding: 0.6rem;
-    /* margin: auto 0; */
-
-    /* grid-area: 2 / 1 / -1 / -1; */
 }
 
 .attribution {
@@ -265,31 +250,4 @@ button[type=submit]:focus-visible {
     width: 100%;
     left: 0%;
     opacity: 1;
-    /* border-bottom: 2px solid; */
 }
-
-
-
-/* .footer {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-top: 1rem;
-    font-size: 0.8rem;
-}
-
-.attribution {
-    text-align: center;
-    justify-content: center;
-    width: 80%;
-}
-
-.attribution>a {
-    color: indigo;
-}
-
-a:visited {
-    color: var(--color-dark-violet);
-} */

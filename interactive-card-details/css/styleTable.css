@@ -15,8 +15,10 @@
     transform: translate(-60%, -10%);
 }
 
+.main {
+    margin: auto 0%;
+}
+
 .form__label__legend {
     font-size: 1rem;
 }
-
-/* to 900px is good use this configuration */

@@ -76,7 +76,7 @@ form.addEventListener("submit", (e) => {
 				Thank you!
 			</h2>
 			<p style="color: var(--color-dark-gray-violet)">We've added your card details</p>
-			<button type="submit" style="width: 15rem" onClick="console.log(window)">Continue</button>
+			<button type="submit" style="width: 15rem" onClick="document.location.reload()">Continue</button>
 			`,
 		styles: "display: flex;flex-direction: column;width: clamp(50%, 80%, 90%);align-items: center;gap: 0.5rem;padding: 1rem 0rem;margin: auto 0%"
 	};

@@ -28,17 +28,28 @@ function trigger(name) {
 function spanError(target) {
 	target.classList.add("error");
 	if (!(target.parentNode.children[target.parentNode.children.length - 1].id === "spanError")) {
-		const child = document.createElement("span");
-		child.setAttribute("id", "spanError");
-		child.classList.add("text-error");
-		child.innerText = `formato no valido`;
-		child.style = "grid-row: 3; grid-column: 1 / -1; color: var(--color-input-error);";
-		target.parentNode.appendChild(child);
+		createChild(target.parentNode, "span", {
+			id: "spanError",
+			classes: ["text-error", "error"],
+			content: "formato no valido",
+			styles: "grid-row: 3;grid-column: 1 / -1;color: var(--color-input-error);"
+		});
 	}
 }
 
-function deleteError(e) {
-	document.querySelectorAll(".text-error").forEach((item) => e.parentNode.removeChild(item));
+function createChild(target, typeChild, params) {
+	const child = document.createElement(typeChild);
+	child.setAttribute("id", params.id);
+	child.setAttribute("style", params.styles);
+	params.classes.map((e) => child.classList.add(e));
+	typeChild === "span" ? (child.innerText = params.content) : false;
+	typeChild !== "span"
+		? (target.appendChild(child).innerHTML = params.content)
+		: target.appendChild(child);
+}
+
+function deleteError(target) {
+	document.querySelectorAll(".text-error").forEach((item) => target.parentNode.removeChild(item));
 }
 
 const self = this;
@@ -46,7 +57,33 @@ const self = this;
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
+	form.style = "display: none";
+	const values = {
+		id: "success",
+		classes: ["success"],
+		content: `
+			<figure style="width: 5rem">
+				<img src="./public/icon-complete.svg" alt="icon-success" />
+			</figure>
+			<h2
+				style="
+					font-size: 2rem;
+					font-weight: 700;
+					margin: 0.5rem 0%;
+					color: var(--color-dark-violet);
+				"
+			>
+				Thank you!
+			</h2>
+			<p style="color: var(--color-dark-gray-violet)">We've added your card details</p>
+			<button type="submit" style="width: 15rem" onClick="console.log(window)">Continue</button>
+			`,
+		styles: "display: flex;flex-direction: column;width: clamp(50%, 80%, 90%);align-items: center;gap: 0.5rem;padding: 1rem 0rem;margin: auto 0%"
+	};
+	createChild(form.parentNode, "section", values);
 });
+
+const btn = document.querySelector("#btn-continue");
 
 const origin = {
 	name: "",

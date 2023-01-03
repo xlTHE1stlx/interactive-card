@@ -103,6 +103,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    margin: auto 0%;
 }
 
 .form {
@@ -200,7 +201,76 @@
     color: var(--color-white);
 }
 
+button[type=submit] {
+    margin-top: 1rem;
+    border-radius: var(--border-radius);
+    padding: calc(var(--padding) * 2) var(--padding);
+    font-size: 1rem;
+    height: clamp(1rem, 80%, 3rem);
+    background: var(--color-dark-violet);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: background 0.3s ease-out;
+}
+
+button[type=submit]:hover,
+button[type=submit]:focus,
+button[type=submit]:focus-visible {
+    background: var(--color-dark-violet-hover);
+    outline-offset: 2px;
+    outline: solid 2px var(--color-dark-violet);
+}
+
 .footer {
+    background-color: gray;
+    /* position: absolute; */
+    /* bottom: 0%; */
+    font-size: 0.8rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    padding: 0.6rem;
+    /* margin: auto 0; */
+
+    /* grid-area: 2 / 1 / -1 / -1; */
+}
+
+.attribution {
+    align-items: center;
+    text-align: center;
+    text-justify: center;
+}
+
+.attribution>a {
+    position: relative;
+    color: var(--color-dark-violet);
+}
+
+.attribution>a::after {
+    content: "";
+    position: absolute;
+    border: 1px solid var(--color-dark-gray-violet);
+    width: 0%;
+    height: 0%;
+    top: 100%;
+    left: 50%;
+    opacity: 0;
+    transition: width 0.5s ease-out, left 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.attribution>a:hover::after {
+    transition: width 0.5s ease, left 0.5s ease, opacity 0.5s ease-in;
+    width: 100%;
+    left: 0%;
+    opacity: 1;
+    /* border-bottom: 2px solid; */
+}
+
+
+
+/* .footer {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -222,4 +292,4 @@
 
 a:visited {
     color: var(--color-dark-violet);
-}
+} */

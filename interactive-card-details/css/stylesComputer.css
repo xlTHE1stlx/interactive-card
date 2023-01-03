@@ -218,7 +218,8 @@ button[type=submit]:focus-visible {
 }
 
 .footer {
-    background-color: rgb(76, 0, 130);
+    /* background-color: rgb(76, 0, 130); */
+    background-color: gray;
     /* background-color: var(--color-light-gray-violet); */
 
     display: flex;
@@ -231,7 +232,7 @@ button[type=submit]:focus-visible {
 
 .attribution>a {
     position: relative;
-    color: var(--color-dark-gray-violet);
+    color: var(--color-dark-violet);
 }
 
 .attribution>a::after {

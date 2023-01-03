@@ -27,9 +27,6 @@ function trigger(name) {
 
 function spanError(target) {
 	target.classList.add("error");
-	// console.log(
-	// 	!(target.parentNode.children[target.parentNode.children.length - 1].id === "spanError")
-	// );
 	if (!(target.parentNode.children[target.parentNode.children.length - 1].id === "spanError")) {
 		const child = document.createElement("span");
 		child.setAttribute("id", "spanError");
@@ -38,7 +35,6 @@ function spanError(target) {
 		child.style = "grid-row: 3; grid-column: 1 / -1; color: var(--color-input-error);";
 		target.parentNode.appendChild(child);
 	}
-	// console.log(target.parentNode);
 }
 
 function deleteError(e) {
@@ -111,7 +107,6 @@ const model = document.querySelectorAll("*[model]").forEach((e) => {
 		if (e.getAttribute("name") === "cvcCard" && e.value.length > 3) {
 			spanError(e);
 		}
-		// console.log(e.parentNode);
 		// proxy[name] = e.value;
 		Reflect.set(proxy, name, e.value);
 	});

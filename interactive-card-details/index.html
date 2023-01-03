@@ -31,7 +31,7 @@
 						type="number"
 						name="cvc"
 						id="cvc"
-						value="000"
+						data-default="000"
 						readonly
 						connection="cvc"
 					/>
@@ -48,15 +48,23 @@
 							src="/card-logo.svg"
 							alt="logo credict card front"
 						/>
-						<p class="container__credictCard__number" connection="cardNumber">hello</p>
+						<p
+							class="container__credictCard__number"
+							connection="cardNumber"
+							data-default="1234 5678 9123 0000"
+						></p>
 						<div class="subContainer__date">
-							<p class="container__name" connection="name">world</p>
+							<p
+								class="container__name"
+								connection="name"
+								data-default="Jane Appleseed"
+							></p>
 							<input
 								class="container__date"
 								type="number"
 								name="month"
 								id="month"
-								value="00"
+								data-default="00"
 								readonly
 								connection="month"
 							/>
@@ -66,7 +74,7 @@
 								type="number"
 								name="year"
 								id="year"
-								value="00"
+								data-default="00"
 								readonly
 								connection="year"
 							/>
@@ -85,6 +93,7 @@
 						id="nameCard"
 						placeholder="e.g. Jane Appleseed"
 						pattern="[a-zA-ZñÑáÁéÉíÍóÓúüÚÜ]{3,}"
+						maxlength="18"
 						required
 						model="name"
 					/>
@@ -98,12 +107,11 @@
 					<input
 						class="label__input"
 						type="text"
-						inputmode="numeric"
 						name="numberCard"
 						id="numberCard"
 						placeholder="e.g. 1234 5678 9123 0000"
 						maxlength="19"
-						pattern="\d*"
+						pattern="\d*\s*"
 						required
 						model="cardNumber"
 					/>
@@ -115,6 +123,8 @@
 						type="number"
 						name="monthCard"
 						id="monthCard"
+						min="0"
+						max="12"
 						placeholder="MM"
 						required
 						model="month"
@@ -124,6 +134,8 @@
 						type="number"
 						name="yearCard"
 						id="yearCard"
+						min="0"
+						max="99"
 						placeholder="YY"
 						required
 						model="year"
@@ -135,8 +147,8 @@
 						name="cvcCard"
 						id="cvcCard"
 						placeholder="e.g. 123"
-						minlength="3"
-						maxlength="3"
+						min="000"
+						max="999"
 						required
 						model="cvc"
 					/>

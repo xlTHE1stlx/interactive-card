@@ -1,9 +1,9 @@
 function result(e, target, name) {
+	const defaultValue = e.getAttribute("data-default");
 	if (e.tagName === "INPUT") {
-		e.value = Reflect.get(target, name);
+		e.value = Reflect.get(target, name) || defaultValue;
 	}
-	// console.log(target, name);
-	e.innerText = Reflect.get(target, name);
+	e.innerText = Reflect.get(target, name) || defaultValue;
 }
 
 function base(e, target, name) {
@@ -23,6 +23,10 @@ function track(target, name) {
 function trigger(name) {
 	const effect = deps.get(name);
 	effect();
+}
+
+function spanError(target, typeError) {
+	console.log(target, typeError);
 }
 
 const self = this;
@@ -64,19 +68,29 @@ const value = document.querySelectorAll("*[connection]").forEach((e) => {
 const model = document.querySelectorAll("*[model]").forEach((e) => {
 	const name = e.getAttribute("model");
 	base(e, proxy, name);
-	// console.log(e);
-	// let counter = 0;
-	e.addEventListener("input", () => {
-		if (e.getAttribute("inputmode")) {
-			if (counter === 3 && e.value.length < 20) {
+	let counter = 0;
+	e.addEventListener("input", (event) => {
+		console.log(name, event);
+		if (e.getAttribute("name") === "numberCard") {
+			counter++;
+			if (counter === 4 && e.value.length < 18) {
 				e.value += " ";
 				counter = 0;
-			} else if (counter < 3 && e.value.length < 19) {
-				e.value;
-				counter++;
+			}
+			if (e.value.length === 0) counter = 0;
+			console.log(counter);
+			// if (e.value.match(/[a-zA-Z]/gm)) {
+			// 	spanError(e, "string");
+			// 	console.log(e.value.match(/[a-zA-Z]/gm));
+			// }
+		}
+		if (e.getAttribute("name") === "yearCard" || e.getAttribute("name") === "monthCard") {
+			if (e.value.length > 2) {
+				spanError(e, "maximo");
 			}
 			console.log(e.value.length);
 		}
+		// proxy[name] = e.value;
 		Reflect.set(proxy, name, e.value);
 	});
 });

@@ -27,16 +27,22 @@ function trigger(name) {
 
 function spanError(target) {
 	target.classList.add("error");
-	if (target.parentNode.lastChild.id === "spanError") {
+	// console.log(
+	// 	!(target.parentNode.children[target.parentNode.children.length - 1].id === "spanError")
+	// );
+	if (!(target.parentNode.children[target.parentNode.children.length - 1].id === "spanError")) {
 		const child = document.createElement("span");
 		child.setAttribute("id", "spanError");
 		child.classList.add("text-error");
 		child.innerText = `formato no valido`;
 		child.style = "grid-row: 3; grid-column: 1 / -1; color: var(--color-input-error);";
 		target.parentNode.appendChild(child);
-		console.log(target.parentNode.lastChild);
 	}
 	// console.log(target.parentNode);
+}
+
+function deleteError(e) {
+	document.querySelectorAll(".text-error").forEach((item) => e.parentNode.removeChild(item));
 }
 
 const self = this;
@@ -81,7 +87,7 @@ const model = document.querySelectorAll("*[model]").forEach((e) => {
 	let counter = 0;
 	e.addEventListener("input", (event) => {
 		if (event.inputType === "deleteContentBackward" || e.value.length === 0) {
-			// deleteError(e);
+			deleteError(e);
 			e.classList.remove("error");
 		}
 		if (e.getAttribute("name") === "numberCard") {

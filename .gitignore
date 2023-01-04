@@ -4,7 +4,9 @@
 #####################################################
 *.sketch
 *.fig
-interactive-card-details/node_modules
+*interactive-card-details
+ ./node_modules
+ *yaml
 
 # Avoid accidental XD upload if you convert the design file
 ###############################################
